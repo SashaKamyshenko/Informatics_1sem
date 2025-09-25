@@ -1,4 +1,4 @@
-with open("input.txt", "r") as f:
+with open("C:/MyPythonProjects/1 week/input1.txt", "r") as f:
     lines = f.readlines()
     numbers = list(map(int, lines[0].split()))
     op = lines[1].strip()
