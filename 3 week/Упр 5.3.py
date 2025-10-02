@@ -3,7 +3,7 @@ import numpy as np
 
 def spiral_matrix(N, M):
     left, top, bottom, right = 0, 0, N, M
-    res = np.zeros((N, N))
+    res = np.zeros((N, M))
     num = 1
 
     while left < right and top < bottom:
@@ -24,8 +24,9 @@ def spiral_matrix(N, M):
         bottom -= 1
 
         res[top:bottom, left][::-1] = np.arange(num, num + bottom - top)
+        num += bottom - top
         left += 1
     return res
 
 
-print(spiral_matrix(4, 4))
+print(spiral_matrix(int(input()), int(input())))
